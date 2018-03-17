@@ -76,7 +76,9 @@ private void playerDistribution(int i){
             break;
 
     }
+
     tvLiberals.setText("Liberals: "+ game.getLiberalCount());
     tvCommunists.setText("Communists: "+game.getCommunistCount());
 }
+
 }
