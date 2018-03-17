@@ -7,6 +7,23 @@
     android:background="#d3543d"
     tools:context="com.schmu.secretdictator.StartScreen">
 
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="300dp"
+        android:layout_height="14dp"
+        android:layout_marginBottom="320dp"
+        android:layout_marginEnd="158dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="229dp"
+        android:max="5"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <Button
         android:id="@+id/btStart"
         android:layout_width="100dp"
