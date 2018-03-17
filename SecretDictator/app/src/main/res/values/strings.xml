@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SecretDictator</string>
+    <string name="LoadProgress">25</string>
 </resources>
