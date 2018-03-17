@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/tourback"
+    android:background="#d3543d"
     tools:context="com.schmu.secretdictator.StartScreen">
 
     <SeekBar
@@ -47,7 +47,9 @@
         android:layout_marginEnd="155dp"
         android:layout_marginStart="151dp"
         android:layout_marginTop="13dp"
-        android:text="Player: 5"
+        android:text="Players: 5"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,13 +73,32 @@
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <TextView
+        android:id="@+id/tvStalin"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginBottom="105dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="serif"
+        android:text="Stalin: 1"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/btStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPlayerCount"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <TextView
         android:id="@+id/tvCommunist"
         android:layout_width="wrap_content"
-        android:layout_height="26dp"
+        android:layout_height="23dp"
         android:layout_marginBottom="105dp"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="220dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="90dp"
         android:fontFamily="serif"
         android:text="Communists: 2"
         android:textColor="@color/colorAccent"
@@ -89,8 +110,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="158dp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="59dp"
         android:layout_marginEnd="80dp"
         android:layout_marginStart="80dp"
