@@ -46,6 +46,9 @@ public class Elections extends AppCompatActivity {
             next.putExtra("votesYes",yes);
             next.putExtra("votesNo",no);
             next.putExtra("kandidat", vorschlagIndex);
+            yes = 0;
+            no = 0;
+            playerCount = 0;
             startActivity(next);
             finish();
         }
@@ -63,6 +66,9 @@ public class Elections extends AppCompatActivity {
             next.putExtra("votesYes",yes);
             next.putExtra("votesNo",no);
             next.putExtra("kandidat", vorschlagIndex);
+            yes = 0;
+            no = 0;
+            playerCount = 0;
             startActivity(next);
             finish();
         }

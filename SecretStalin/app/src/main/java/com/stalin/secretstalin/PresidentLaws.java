@@ -19,7 +19,7 @@ public class PresidentLaws extends AppCompatActivity {
     private ToggleButton togglebutton;
     private int selectionCount;
     private Button submit;
-    private ArrayList<ToggleButton> buttonArray;
+    private ArrayList<ToggleButton> buttonArray = new ArrayList<>();
     private ArrayList<Integer> nextPolicys;
 
     @Override
@@ -31,14 +31,14 @@ public class PresidentLaws extends AppCompatActivity {
         for (int i = 0; i < 3; i++){
             policy.add(game.getLaw());
         }
-        submit = (Button) findViewById(R.id.submit);
+        submit = (Button) findViewById(R.id.submitButton);
         submit.setEnabled(false);
 
         ToggleButton toggleOne = (ToggleButton) findViewById(R.id.toggleButtonOne);
         buttonArray.add(toggleOne);
         ToggleButton toggleTwo = (ToggleButton) findViewById(R.id.toggleButtonTwo);
         buttonArray.add(toggleTwo);
-        ToggleButton toggleThree = (ToggleButton) findViewById(R.id.toggleButtonThree);
+        ToggleButton toggleThree = (ToggleButton) findViewById(R.id.toggleButton);
         buttonArray.add(toggleThree);
 
 
@@ -49,12 +49,11 @@ public class PresidentLaws extends AppCompatActivity {
             }else{
                 buttonArray.get(i).setText("Communist");
             }
-    }
+        }
         togglebutton(toggleOne);
         togglebutton(toggleTwo);
         togglebutton(toggleThree);
 
-        buttonArray
     }
 
     private void togglebutton(final ToggleButton toggle) {
@@ -76,15 +75,16 @@ public class PresidentLaws extends AppCompatActivity {
                     selectionCount--;
                 }
             }
-        }
+        });
     }
 
     private int checkButtoninArray(ToggleButton button){
-        for (int i = 0; i < buttonArray.size(); i++{
-            if (button = buttonArray[i]) {
+        for (int i = 0; i < buttonArray.size(); i++) {
+            if (button == buttonArray.get(i)) {
                 return i;
             }
         }
+        return -1;
     }
 
     //3 ToggleButtons

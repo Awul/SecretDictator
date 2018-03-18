@@ -28,8 +28,7 @@ public class RoundOverview extends AppCompatActivity {
         tvNumbersOfLiberalLaws.setText(game.getNumberOfAktiveLiberalLaws());
         tvNumbersOfCommunistLaws.setText(game.getNumberOfAktiveCommunistLaws());
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, game.);
-        mListView.setAdapter(adapter);ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listItems);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, game.personsList);
         mListView.setAdapter(adapter);
 
     }

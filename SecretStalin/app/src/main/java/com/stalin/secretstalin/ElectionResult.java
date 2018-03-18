@@ -3,6 +3,7 @@ package com.stalin.secretstalin;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -38,7 +39,7 @@ public class ElectionResult extends AppCompatActivity {
         //TODO ERST LOADING MIT EXTRA WEITERLEITUARFHUSAjn
     }
 
-    private void result(){
+    public void result(View v){
         if(electionResult>0){
             game.failCounter=0;
             startActivity(topTom);
