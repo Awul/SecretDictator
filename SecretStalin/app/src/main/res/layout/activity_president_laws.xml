@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context="com.schmu.secretdictator.PresidentLaws">
 
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        tools:layout_editor_absoluteX="245dp"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="367dp" />
 </android.support.constraint.ConstraintLayout>

@@ -6,4 +6,41 @@
     android:layout_height="match_parent"
     tools:context="com.schmu.secretdictator.RoundOverview">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/recipe_list_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/sumit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <TextView
+        android:id="@+id/tvNumbersOfCommunistLaws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <TextView
+        android:id="@+id/tvNumbersOfLiberalLaws"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="268dp"
+        tools:layout_editor_absoluteY="146dp" />
+
 </android.support.constraint.ConstraintLayout>
