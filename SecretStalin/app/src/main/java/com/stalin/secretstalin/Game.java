@@ -20,6 +20,9 @@ public class Game {
     private int liberalCardCount=15;
     private int presidentIndex;
     public int failCounter;
+    public int numberOfAktiveLiberalLaws = 0;
+    public int numberOfAktiveCommunistLaws = 0;
+
 
     public Game(int playerCount, int stalinCount, int communistCount, int liberalCount) {
         PlayerCount = playerCount;
@@ -109,4 +112,19 @@ public class Game {
         return cardStack.pop();
     }
 
+    public void setNumberOfAktiveLiberalLaws(int numberOfAktiveLiberalLaws) {
+        this.numberOfAktiveLiberalLaws = numberOfAktiveLiberalLaws;
+    }
+
+    public void setNumberOfAktiveCommunistLaws(int numberOfAktiveCommunistLaws) {
+        this.numberOfAktiveCommunistLaws = numberOfAktiveCommunistLaws;
+    }
+
+    public int getNumberOfAktiveLiberalLaws() {
+        return numberOfAktiveLiberalLaws;
+    }
+
+    public int getNumberOfAktiveCommunistLaws() {
+        return numberOfAktiveCommunistLaws;
+    }
 }
