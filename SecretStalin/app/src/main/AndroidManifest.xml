@@ -9,21 +9,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartScreen">
+        <activity
+            android:name=".StartScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoadingGame" />
-        <activity android:name=".Characters" />
-        <activity android:name=".Elections" />
-        <activity android:name=".ElectionResult" />
-        <activity android:name=".PresidentSelect" />
-        <activity android:name=".PresidentLaws" />
-        <activity android:name=".ChancellorLaw" />
-        <activity android:name=".RoundOverview"></activity>
+        <activity
+            android:name=".LoadingGame"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Characters"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Elections"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ElectionResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PresidentSelect"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PresidentLaws"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChancellorLaw"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RoundOverview"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Instructions"></activity>
     </application>
 
 </manifest>
