@@ -1,7 +1,9 @@
 package com.stalin.secretstalin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.SeekBar;
@@ -42,43 +44,50 @@ public class StartScreen extends AppCompatActivity {
         tvLiberals = (TextView) findViewById(R.id.tvLiberal);
     }
 
-private void playerChange(int i){
-    game.setPlayerCount(i);
-    tvPlayers.setText("Players: "+ game.getPlayerCount());
-    playerDistribution(i);
-}
-
-private void playerDistribution(int i){
-    switch(i){
-        case 5:
-            game.setCommunistCount(1);
-            game.setLiberalCount(3);
-            break;
-        case 6:
-            game.setCommunistCount(1);
-            game.setLiberalCount(4);
-            break;
-        case 7:
-            game.setCommunistCount(2);
-            game.setLiberalCount(4);
-            break;
-        case 8:
-            game.setCommunistCount(2);
-            game.setLiberalCount(5);
-            break;
-        case 9:
-            game.setCommunistCount(3);
-            game.setLiberalCount(5);
-            break;
-        case 10:
-            game.setCommunistCount(3);
-            game.setLiberalCount(5);
-            break;
-
+    private void playerChange(int i){
+        game.setPlayerCount(i);
+        tvPlayers.setText("Players: "+ game.getPlayerCount());
+        playerDistribution(i);
     }
 
-    tvLiberals.setText("Liberals: "+ game.getLiberalCount());
-    tvCommunists.setText("Communists: "+game.getCommunistCount());
-}
+    private void playerDistribution(int i){
+        switch(i){
+            case 5:
+                game.setCommunistCount(1);
+                game.setLiberalCount(3);
+                break;
+            case 6:
+                game.setCommunistCount(1);
+                game.setLiberalCount(4);
+                break;
+            case 7:
+                game.setCommunistCount(2);
+                game.setLiberalCount(4);
+                break;
+            case 8:
+                game.setCommunistCount(2);
+                game.setLiberalCount(5);
+                break;
+            case 9:
+                game.setCommunistCount(3);
+                game.setLiberalCount(5);
+                break;
+            case 10:
+                game.setCommunistCount(3);
+                game.setLiberalCount(5);
+                break;
+
+        }
+
+        tvLiberals.setText("Liberals: "+ game.getLiberalCount());
+        tvCommunists.setText("Communists: "+game.getCommunistCount());
+    }
+
+    public void nuke(View v) {
+        Intent lock = new Intent(getApplicationContext(), LoadingGame.class);
+        Intent names = new Intent(getApplicationContext(), Characters.class);
+        lock.putExtra("next", names.toUri(0));
+        startActivity(lock);
+    }
 
 }

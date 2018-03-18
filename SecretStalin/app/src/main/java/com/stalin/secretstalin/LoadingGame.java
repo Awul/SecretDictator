@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ProgressBar;
@@ -12,7 +13,9 @@ import java.net.URISyntaxException;
 
 public class LoadingGame extends AppCompatActivity {
 
-        private boolean gameNotFinished=true;
+    private boolean gameNotFinished=true;
+    Intent next = null;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +28,15 @@ public class LoadingGame extends AppCompatActivity {
         picLL.layout(0,0,100,100);
 
         setContentView(R.layout.activity_loading_game);
+        findViewById(R.id.clicker).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                click(view);
+            }
+        });
 
         //getting Activity, that has to be started after this one:
-        Intent next = null;
+
         try {
             next = Intent.parseUri(getIntent().getStringExtra("next"), 0);
         } catch (URISyntaxException e) {
@@ -41,13 +50,25 @@ public class LoadingGame extends AppCompatActivity {
                 gameNotFinished=spawnDictator();
             }
         }
-        startActivity(next);
-        finish();
+
     }
 
     private boolean spawnDictator(){
        boolean hitted=false;
 
        return hitted;
+    }
+
+    public void click(View v){
+        counter++;
+        if (counter == 1) {
+            counter = 0;
+            startNext();
+        }
+    }
+
+    private void startNext(){
+        startActivity(next);
+        finish();
     }
 }
